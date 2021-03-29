@@ -5,8 +5,10 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => Saldo(0),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => Saldo(0)),
+      ],
       child: ByteBankApp(),
     ),
   );

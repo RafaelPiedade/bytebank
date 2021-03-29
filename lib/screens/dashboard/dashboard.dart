@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../transferencia/formulario.dart';
+import '../transferencia/formulario.dart';
 
 class Dashboard extends StatelessWidget {
   @override
@@ -19,18 +20,38 @@ class Dashboard extends StatelessWidget {
             alignment: Alignment.topCenter,
             child: SaldoCard(),
           ),
-          ElevatedButton(
-            child: Text('Receber depósito'),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return FormularioDeposito();
-                  },
-                ),
-              );
-            },
+          ButtonBar(
+            alignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                child: Text('Receber depósito'),
+                style: ElevatedButton.styleFrom(primary: Colors.green),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return FormularioDeposito();
+                      },
+                    ),
+                  );
+                },
+              ),
+              ElevatedButton(
+                child: Text('Nova Transferência'),
+                style: ElevatedButton.styleFrom(primary: Colors.green),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return FormularioTransferencia();
+                      },
+                    ),
+                  );
+                },
+              ),
+            ],
           )
         ],
       ),
