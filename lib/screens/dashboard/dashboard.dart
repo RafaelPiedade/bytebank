@@ -1,13 +1,8 @@
-import 'package:bytebank/models/saldo.dart';
 import 'package:bytebank/screens/dashboard/saldo.dart';
 import 'package:bytebank/screens/deposito/formulario.dart';
-import 'package:bytebank/screens/transferencia/lista.dart';
+import 'package:bytebank/screens/transferencia/formulario.dart';
 import 'package:bytebank/screens/transferencia/ultimas.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
-import '../transferencia/formulario.dart';
-import '../transferencia/formulario.dart';
 
 class Dashboard extends StatelessWidget {
   @override
